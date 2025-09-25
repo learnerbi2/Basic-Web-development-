@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Test Post</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+
+     async function testPost(){
+        let a =await fetch('/mynewpath',{
+            method:'PUT',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({name:"raju"})
+        });
+
+        let b = await a.text();
+        console.log(b);
+     }
+        testPost();
+    </script>
+</body>
+</html>
