@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Simulator</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding:0px;
+        background-color: black;
+        color:green;
+    }
+    body{
+        
+    }
+    .hacker-panel{
+        border:2px solid green;
+        border-radius: 1px;
+        height: 100%;
+        width:100%;
+        padding:20px;
+        animation-name: blink;
+        animation-duration: 1.0s;
+        animation-iteration-count: infinite;
+        animation-delay: 10s;
+    }
+  .msg{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .combo{
+    display:flex;
+    font-size: 1em;
+  }
+  .hacker-panel{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin:20px;
+  }
+  .dots{
+    color: black;
+  }
+
+  @keyframes blink {
+    0% { 
+        border:2px solid green;
+     }
+    50% { 
+        border:2px solid red;
+    }
+    100% { 
+        border:2px solid green;
+    }
+  }
+</style>
+<body>
+   
+    <div class="hacker-panel">
+      <div class="combo"><p id="1st" class="msg"></p> <p class="dots">.</p></div>
+      <div class="combo"><p id="2nd" class="msg"></p> <p class="dots">.</p></div>
+      <div class="combo"><p id="3rd" class="msg"></p> <p class="dots">.</p></div>
+      <div class="combo"><p id="4th" class="msg"></p> <p class="dots">.</p></div>
+      <div class="combo"><p id="5th" class="msg"></p> <p class="dots">.</p></div>
+    </div>
+
+<script>
+let dots = document.querySelectorAll(".dots");
+const first = document.getElementById("1st");
+const second = document.getElementById("2nd");
+const third = document.getElementById("3rd");
+const fourth = document.getElementById("4th");
+const fifth = document.getElementById("5th");
+
+async function updateDots(node,value,time){
+setInterval(()=>{
+    node.forEach(node => {
+        node.style.color="green"
+        node.innerHTML=value;
+    });
+},time);
+}
+
+async function dotchange(){
+    await updateDots(dots,"..",1000);
+    await updateDots(dots,"...",1500);
+}
+
+function typeWriterEffect(element, text, delay) {
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, delay);
+        }
+    }
+    type();
+}
+
+async function initaliseCode(node,strValue,time){
+setTimeout(()=>{
+    node.forEach(node => {
+       typeWriterEffect(node, strValue, 125);
+
+    });
+},time);
+}
+
+async function hackCode(){
+// typeWriterEffect(document.getElementById("1st"), "Initializing Hacking", 125);
+initaliseCode([first], "Initializing Hacking", 5000);
+dotchange();
+// typeWriterEffect(document.getElementById("2nd"), "Reading your Files", 125);
+initaliseCode([second], "Reading your Files", 10000);
+dotchange();
+// typeWriterEffect(document.getElementById("3rd"), "Password Files Detected", 125);
+initaliseCode([third], "Password Files Detected", 15000);
+dotchange();
+// typeWriterEffect(document.getElementById("4th"), "Sending all passwords and personal Files to Server", 125);
+initaliseCode([fourth], "Sending all passwords and personal Files to Server", 20000);
+dotchange();
+initaliseCode([fifth], "Cleaning Up", 28000);
+dotchange();
+}
+hackCode();
+</script>
+</body>
+</html>

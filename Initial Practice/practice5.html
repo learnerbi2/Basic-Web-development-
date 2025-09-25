@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 5</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+      #container{
+        height:100px;
+        background-color: cornflowerblue;
+      }
+      #list{
+        list-style-type:none;
+       display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        padding-top: 40px;
+      }
+      #div1{
+        margin-top: 20px;
+        width:400px;
+        height:400px;
+        background-color:lightgreen;
+        display: flex;
+        flex-direction: row;
+       justify-content: center;
+       align-items: center;
+      }
+
+      #div2{
+        height:100px;
+        width:100px;
+        background-color: lightcoral;
+        visibility: hidden;
+
+      }
+
+
+    </style>
+</head>
+<body>
+   <div id="container">
+   <ul id="list">
+       <li><a href="#">Home</a></li>
+       <li><a href="#">AboutUs</a></li>
+       <li><a href="#">Help</a></li>
+        <li><a href="#">contactUs</a></li>
+   </ul>
+   </div>
+
+   <div id="div1">
+       <div id="div2">
+       </div>
+   </div>
+</body>
+</html>

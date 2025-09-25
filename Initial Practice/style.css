@@ -1,0 +1,104 @@
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+#container{
+    height:60px;
+    background-color: #0f1111;
+}
+a{ 
+   text-decoration: none;
+   color:white;
+   margin-right: 200px;
+}
+inputText{
+    color: grey;
+}
+#amazon{
+    color: #f08804;
+    font-size: 25px;
+}
+#search{
+    border: 2px solid black;
+    background-color: #f08804;
+    color:white;
+
+}
+
+/*container css*/
+#box1{
+    background-image: url("krishna.jpg");
+    background-size: cover;
+    display:inline-block;
+    margin:3px;
+    border:2px solid red;
+    height:100px;
+    width: 100px;
+    
+}
+#box2{
+    background-color: rgba(0, 255, 0, 0.5);
+    display:inline-block;
+    margin:3px;
+    border:2px solid black;
+    height:100px;
+    width: 100px;
+}
+#box3{
+    background-color:rgba(255, 0, 0, 0.5);;
+    display:inline-block;
+    margin:3px;
+    border: 2px solid blue;
+    height:100px;
+    width:100px;
+}
+footer{
+    background-color:black;
+    color:white;
+    text-align: center;
+}
+#content{
+    height:800px;
+}
+
+header{
+    position:sticky;
+}
+
+#bg{
+    height: 200px;
+    width:200px;
+    position:fixed;
+    background-image: url("krishna.jpg");
+    background-size: cover;
+    z-index:2;
+    text-align: center;
+}
+
+#wishes{
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 200px;
+    font-size: 30px;
+    overflow:auto;
+    max-height: 120px;
+}
+.box{
+    
+    position:absolute ;
+    left:20px;
+    top:20px;
+    height:50px;
+    width:50px;
+    background-color: red;
+}
+
+@media only screen and (max-width:600px){
+   body{
+    background-color: green;
+   }
+   .box{
+    background-color: blueviolet;
+   }
+}

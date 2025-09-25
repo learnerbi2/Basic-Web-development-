@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice Animation</title>
+        <style>
+            .box{
+                height:400px;
+                width:600px;
+                display:flex;
+                background-color:blue;
+                justify-content: flex-start;
+                align-items: flex-end;
+                overflow:hidden;
+                
+              
+            }
+
+            .ball{
+                height: 50px;
+                width: 50px;
+                background-color: red;
+                border-radius: 70%;
+                animation-name: move;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite; 
+            }
+
+             @keyframes move { 
+                /* template  */
+       0%   { transform: translate(0px,   0px); }       /* start */
+      10%  { transform: translate(50px, -120px); }   /* going up */
+      20%  { transform: translate(100px, -200px); }   /* peak */
+      30%  { transform: translate(150px, -120px); }   /* coming down */
+      40%  { transform: translate(200px, -40px); }    /* near ground */
+      50%  { transform: translate(250px,   0px); }    /* ground */
+      60%   { transform: translate(300px,  -120px); }       /* start */
+      70%  { transform: translate(350px, -200px); }   /* going up */
+      80%  { transform: translate(400px, -120px); }   /* peak */
+      90%  { transform: translate(450px, -40px); }   /* coming down */
+      100%  { transform: translate(500px, -0px); }    /* near ground */
+     
+            } 
+     
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="ball">
+
+            </div>
+        </div>
+    </body>
+</html>

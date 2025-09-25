@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage</title>
+    </head>
+
+<body>
+
+    <script>
+        if(localStorage.getItem("name")){
+        a = localStorage.getItem("name");
+        document.write("Welcome "+a);
+        }
+       else{
+       let a = prompt("enter name");
+        localStorage.setItem("name", a)
+        document.write("Welcome "+ a)
+
+        }
+    </script>
+</body>
+</html>
